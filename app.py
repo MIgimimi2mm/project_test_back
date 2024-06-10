@@ -12,6 +12,11 @@ RPI_SERVER_URL = "http://<Raspberry PiのIPアドレス>:5001/receive_message"
 def hello():
     return "Hello from Flask!"
 
+@app.route('/message2', methods=['POST'])
+def process_message():
+    t=1
+    return jsonify({'message': t})
+
 @app.route('/message', methods=['POST'])
 def process_message():
     data = request.get_json()
