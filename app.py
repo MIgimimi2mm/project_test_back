@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)  # CORS設定を追加
 
 # Raspberry PiのURLを指定
-RPI_SERVER_URL = "http://<Raspberry PiのIPアドレス>:5001/receive_message"
+RPI_SERVER_URL = "http://10.124.57.76:5001:5001/receive_message"
 
 @app.route('/')
 def hello():
